@@ -1,0 +1,16 @@
+body {
+	background-color: #8a0000;
+}
+
+#blocker {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+#container {
+	position: relative;
+	display: inline-block;
+}
+

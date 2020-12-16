@@ -22,6 +22,13 @@ function Element( id, x, y, z, ry, rx ) {
 	iframe.src = [ 'https://www.youtube.com/embed/', id, '?modestbranding=1&&playsinline=1&autohide=1&showinfo=0&controls=0&autoplay=1&mute=1&enablejsapi=1&loop=1&&playlist='+id ].join( '' );
 	div.appendChild( iframe );
 
+	const object = new CSS3DObject( div );
+	object.position.set( x, y, z );
+	object.rotation.y = ry;
+	object.rotation.x = rx;
+
+	return object;
+
 		// var tag = document.createElement('script');
 		// tag.src = "https://www.youtube.com/iframe_api";
 		// var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -43,12 +50,12 @@ function Element( id, x, y, z, ry, rx ) {
 		// 	event.target.playVideo();
 		// }
 		
-		const object = new CSS3DObject( div );
-		object.position.set( x, y, z );
-		object.rotation.y = ry;
-		object.rotation.x = rx;
+		// const object = new CSS3DObject( div );
+		// object.position.set( x, y, z );
+		// object.rotation.y = ry;
+		// object.rotation.x = rx;
 
-		return object;
+		// return object;
 
 };
 
